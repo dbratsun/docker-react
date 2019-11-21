@@ -8,5 +8,5 @@ before_install:
 script: 
   #  The course solution don't work !!
   # - docker run dbratsun/docker-react npm run test -- --coverage
+  #
   - docker run -e CI=true npm run test
-  
