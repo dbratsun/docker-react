@@ -18,4 +18,7 @@ it('This is 100% error', () => {
   dummyfunction(); // this should fail
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2958db6bd2db481e0b9abd9a8a569d5c3a128c5c
