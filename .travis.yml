@@ -10,3 +10,17 @@ script:
   # - docker run dbratsun/docker-react npm run test -- --coverage
   #
   - docker run dbratsun/docker-react npm run coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-392734811425"
+  bucket_path: "docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"   
+
