@@ -13,3 +13,8 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+it('This is 100% error', () => {
+  dummyfunction(); // this should fail
+});
+
