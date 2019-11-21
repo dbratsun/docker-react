@@ -18,4 +18,3 @@ it('This is 100% error', () => {
   dummyfunction(); // this should fail
 });
 
-
