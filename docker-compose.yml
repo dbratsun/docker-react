@@ -1,22 +1,21 @@
-version: '3'
-services: 
+version: "3"
+services:
   web:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - "3000:3000"
-    #  работает только с нормальной шарой дисков а не за файрволом !!  
-    #    volumes:
-    #      - /app/node_modules
-    #      - .:/app
+      - "3010:3000"
+    #  работает только с нормальной шарой дисков а не за файрволом !!
+    volumes:
+      - /app/node_modules
+      - .:/app
   tests:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.dev
-    #  работает только с нормальной шарой дисков а не за файрволом !!  
-    #    volumes:
-    #      - /app/node_modules
-    #      - .:/app     
+    #  работает только с нормальной шарой дисков а не за файрволом !!
+    volumes:
+      - /app/node_modules
+      - .:/app
     command: ["npm", "run", "test"]
-
