@@ -16,7 +16,7 @@ script:
   # и это неверно
   # - docker run dbratsun/docker-react npm run coverage
   # а это верно
-  - docker run -e CI=true USERNAME/docker-react npm run test -- --coverage
+  - docker run -e CI=true dbratsun/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
